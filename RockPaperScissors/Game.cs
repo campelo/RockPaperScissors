@@ -48,13 +48,13 @@
                 return;
             }
             Player roundWinner;
-            if (player1.CurrentChoice.WinsAgainst.Contains(player2.CurrentChoice))
+            if (player1.CurrentChoice.LosesTo.Contains(player2.CurrentChoice))
             {
-                roundWinner = player1;
+                roundWinner = player2;
             }
             else
             {
-                roundWinner = player2;
+                roundWinner = player1;
             }
             roundWinner.AddPoint();
             Console.WriteLine($"{roundWinner.Name} won this round. Hit ENTER to continue...");

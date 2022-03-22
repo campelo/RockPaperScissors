@@ -30,16 +30,13 @@
             AvailableChoice scissors = new AvailableChoice("scissors");
             AvailableChoice flamethrower = new AvailableChoice("flamethrower");
 
-            rock.WinsAgainst.Add(scissors);
             rock.LosesTo.Add(paper);
-
-            paper.WinsAgainst.Add(rock);
+            
             paper.LosesTo.Add(scissors);
+            paper.LosesTo.Add(flamethrower);
 
-            scissors.WinsAgainst.Add(paper);
             scissors.LosesTo.Add(rock);
 
-            flamethrower.WinsAgainst.Add(paper);
             flamethrower.LosesTo.Add(rock);
             flamethrower.LosesTo.Add(scissors);
 
